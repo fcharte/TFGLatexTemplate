@@ -1,0 +1,105 @@
+% !TeX spellcheck = es_ES
+\documentclass[12pt, a4paper, twoside]{report}   % Tamaño de papel, de fuente y márgenes
+\usepackage[spanish]{babel}  % Idioma y codificación, para poder usar
+\usepackage[utf8x]{inputenc} % tildes, eñes, etc., sin problemas
+\usepackage[T1]{fontenc}
+
+% ============================================================|
+%                                                             |
+% Plantilla para TFG del Dpto. de Informática de la EPSJ v1.0 |
+%                                                             |
+% Ajustada según la normativa de estilo indicada por la EPSJ  |
+% en el documento https://eps.ujaen.es/sites/centro_epsj/files|
+% /uploads/documents/grados/TFG/criteriosYestilo_TFG.pdf      |
+%                                                             |
+%    - A4 con márgenes de 2.5cm                               |
+%    - Intelineado de 1.5 líneas                              |
+%    - Primera línea de cada párrafo con sangrado             |
+%    - Fuente Arial de 12pt                                   |
+%    - Cabecera con nombre de estudiante y título de TFG      |
+%    - Pie con nombre del centro y nº de página               |
+%    - Portada oficial EPSJ - Dpto. Informática con datos     |
+%                                                             |
+% 2020/09/25 - Francisco Charte Ojeda                         |
+% CC0 1.0 Universal (CC0 1.0)                                 |
+% https://creativecommons.org/publicdomain/zero/1.0/deed.es   |
+%                                                             |
+%=============================================================|
+
+% ==== Introducir aquí el nombre del estudiante
+\def\Estudiante{Nombre1 Nombre2 Apellido1 Apellido2}
+
+% ==== Introducir aquí el nombre de los tutores. Si solo hay uno dejar las llaves de \TutorB vacías
+\def\TutorA{Nombre y apellidos del tutor 1}
+\def\TutorB{Nombre y apellidos del tutor 2}
+
+% ==== Introducir aquí el título de completo y abreviado (para las cabeceras) del TFG
+\def\TituloTFG{El título del TFG tal y como aparece en la propuesta original}
+\def\TituloAbreviado{Título abreviado para el encabezado}
+
+% ==== Introducir aquí el mes y año de presentación del TFG
+\def\Fecha{junio de 2021}
+
+\input{Portada.tex}
+
+\begin{document}
+
+    \Portada~			
+
+    \pagenumbering{roman}  % Numeración romana para los agradecimientos, dedicatoria y tablas de contenidos
+
+    \input{Agradecimientos.tex} % Editar este archivo para introducir los agradecimientos/dedicatoria
+
+    \cleardoublepage
+    \tableofcontents  % Tabla de contenidos
+
+% ===== Comentar o eliminar las líneas de los índices que no deseen incluirse al inicio de la memoria
+
+    \clearpage\thispagestyle{empty}\cleardoublepage
+    \listoffigures		% Índice de figuras
+
+    \clearpage\thispagestyle{empty}\cleardoublepage
+    \listoftables 		% Índice de tablas
+
+    \clearpage\thispagestyle{empty}\cleardoublepage
+    \listofalgorithms
+    
+    \clearpage\thispagestyle{empty}\cleardoublepage
+    \lstlistoflistings		% Índice de listados
+          
+    \clearpage\thispagestyle{empty}\cleardoublepage
+    \pagenumbering{arabic} % Numeración arábiga para el resto del documento
+
+% ===== Archivos LaTeX con los distintos capítulos que componen la memoria
+
+\input{Introduccion.tex}  
+\clearpage\thispagestyle{empty}\cleardoublepage
+
+\input{Antecedentes.tex}
+\clearpage\thispagestyle{empty}\cleardoublepage
+
+\input{Objetivos.tex}
+\clearpage\thispagestyle{empty}\cleardoublepage
+
+\input{MaterialMetodos.tex}
+\clearpage\thispagestyle{empty}\cleardoublepage
+
+\input{Resultados.tex}
+\clearpage\thispagestyle{empty}\cleardoublepage
+
+\input{Conclusiones.tex}
+\clearpage\thispagestyle{empty}\cleardoublepage
+
+% ===== Configuración de la bibliografía
+
+\pagenumbering{roman}  % Numeración romana para el índice
+\bibliographystyle{unsrtnat}
+\bibliography{bibliografia}
+\addcontentsline{toc}{chapter}{Bibliografía}
+
+\clearpage\thispagestyle{empty}
+\begin{center}
+{\color{flashwhite} Generado con la plantilla \LaTeX \textit{TFG Dpto. Informática - EPSJ - v1.0} \par Licencia CC0 1.0 Universal (CC0 1.0) - Francisco Charte Ojeda}
+\end{center}
+
+\end{document}

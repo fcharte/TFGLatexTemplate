@@ -1,0 +1,176 @@
+% ============================================================|
+%                                                             |
+% Plantilla para TFG del Dpto. de Informática de la EPSJ v1.0 |
+%                                                             |
+% Ajustada según la normativa de estilo indicada por la EPSJ  |
+% en el documento https://eps.ujaen.es/sites/centro_epsj/files|
+% /uploads/documents/grados/TFG/criteriosYestilo_TFG.pdf      |
+%                                                             |
+%    - A4 con márgenes de 2.5cm                               |
+%    - Intelineado de 1.5 líneas                              |
+%    - Primera línea de cada párrafo con sangrado             |
+%    - Fuente Arial de 12pt                                   |
+%    - Cabecera con nombre de estudiante y título de TFG      |
+%    - Pie con nombre del centro y nº de página               |
+%    - Portada oficial EPSJ - Dpto. Informática con datos     |
+%                                                             |
+% 2020/09/25 - Francisco Charte Ojeda                         |
+% CC0 1.0 Universal (CC0 1.0)                                 |
+% https://creativecommons.org/publicdomain/zero/1.0/deed.es   |
+%                                                             |
+%=============================================================|
+
+\usepackage[margin=2.5cm]{geometry}
+
+\usepackage{setspace} % Para fijar el interlineado
+
+\usepackage{fancyhdr} % Para los encabezados y pies
+\pagestyle{fancy}
+\fancyhf{}
+
+\usepackage{lipsum} % Para generar texto como contenido de prueba, se puede eliminar en la memoria final
+
+\usepackage{helvet}
+
+\usepackage{wallpaper}   % Para introducir el PDF con la portada EPSJ
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{etoolbox}  % Herramientas y bibliografía
+\usepackage{natbib}
+\usepackage{csquotes}
+
+\usepackage{hyperref}  % Para URL como enlaces
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={\TituloTFG},
+    pdfauthor={\Estudiante}
+    bookmarks=true,
+    bookmarksopen=true,
+    pdfpagemode=FullScreen,
+    breaklinks=true,
+    citecolor=cyan,
+}
+
+\usepackage{booktabs}  % Para tablas con mejor apariencia
+
+\usepackage[ruled,vlined]{algorithm2e} % Para incluir algoritmos
+\renewcommand{\algorithmcfname}{Algoritmo}
+\renewcommand{\listalgorithmcfname}{Lista de algoritmos}
+
+\usepackage{listings}  % Para incluir listados de código
+\usepackage{xcolor}
+\lstset{ %
+  %language=delphi,                % the language of the code
+  basicstyle=\linespread{0.7}\small\ttfamily,       % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\footnotesize\color{gray},  % the style that is used for the line-numbers
+  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line will be numbered
+  numbersep=7pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{gray!5},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=true,         % underline spaces within strings
+  showtabs=true,                 % show tabs within strings adding particular underscores
+  frameround=fttt,
+  frame=rtBL,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=4,                      % sets default tabsize to 2 spaces
+  aboveskip=1em,
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;  also try caption instead of title
+  keywordstyle=\bf\ttfamily,          % keyword style
+  commentstyle=\color{black!60}\ttfamily,       % comment style
+  stringstyle=\color{blue}\ttfamily,         % string literal style
+  escapeinside={\%*}{*)}            % if you want to add a comment within your code
+}
+\renewcommand{\lstlistingname}{Listado}
+\renewcommand{\lstlistlistingname}{Lista de listados de código}
+\lstset
+{
+    language=[LaTeX]TeX,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{gray},
+    texcl=true
+}
+\lstset{
+    language=Python,
+    literate={á}{{\'a}}1
+        {ã}{{\~a}}1
+        {é}{{\'e}}1
+        {ó}{{\'o}}1
+        {í}{{\'i}}1
+        {ñ}{{\~n}}1
+        {¡}{{!`}}1
+        {¿}{{?`}}1
+        {ú}{{\'u}}1
+        {Í}{{\'I}}1
+        {Ó}{{\'O}}1
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parskip}{1em}
+
+% Configuración de encabezado y pie
+\fancyhead[RE,LO]{{\color{gray}\Estudiante}}
+\fancyhead[LE,RO]{{\color{gray}\TituloAbreviado}}
+\fancyfoot[RE,LO]{{\color{gray}Escuela Politécnica Superior de Jaén}}
+\fancyfoot[LE,RO]{{\color{gray}\thepage}}
+\renewcommand{\footrulewidth}{1pt}
+
+\renewcommand{\spanishtablename}{Tabla.}  % Título para las tablas
+\renewcommand{\spanishcontentsname}{Tabla de contenidos}  % y los índices
+\renewcommand{\spanishlistfigurename}{Lista de figuras}
+\renewcommand{\spanishlisttablename}{Lista de tablas}
+
+% Comando que se encarga de componer la portada del TFG
+\newcommand{\Portada}{ %
+    \thispagestyle{empty}
+    \ULCornerWallPaper{1}{imagenes/portada.pdf}
+    \begin{textblock*}{14cm}(5cm,13cm) 
+        \centering
+        {\fontsize{32}{38}\selectfont \textbf{\TituloTFG}}
+    \end{textblock*}
+    \begin{textblock*}{10cm}(8cm,20.6cm)
+      {\fontsize{16}{19}\selectfont \Estudiante}
+    \end{textblock*}
+    \begin{textblock*}{10cm}(7.2cm,21.9cm)
+      {\fontsize{16}{19}\selectfont \TutorA\par\TutorB}
+    \end{textblock*}
+    ~
+    \clearpage
+    \ClearWallPaper
+    \thispagestyle{empty}
+    \definecolor{flashwhite}{rgb}{0.95, 0.95, 0.96}
+    \cleardoublepage
+
+    \thispagestyle{empty}
+    \begin{figure}
+        \centering
+        \includegraphics[width=.4\textwidth]{imagenes/uja.jpg}
+    \end{figure}
+    
+    \vspace*{4em}
+    
+    D./Dª \TutorA \ifdefempty{\TutorB}{}{~y D./Dª \TutorB}, tutor(es) del Trabajo Fin de Grado titulado: \textbf{\TituloTFG}, que presenta \Estudiante, autoriza(n) su presentación para defensa y evaluación en la Escuela Politécnica Superior de Jaén.
+    
+    \vspace*{2em}
+    \begin{center}
+        Jaén, \Fecha
+    \end{center}
+    
+    \vspace{2em}
+    \hspace{2cm} El estudiante \hspace{6cm} \ifdefempty{\TutorB}{El tutor}{Los tutores}
+    
+    \vspace{5cm}
+    \begin{tabular}{p{6cm}p{.5cm} \ifdefempty{\TutorB}{p{7cm}}{p{4cm}p{4cm}}}
+      \Estudiante & & \TutorA \ifdefempty{\TutorB}{}{& \TutorB} \\    
+    \end{tabular}
+    \clearpage\thispagestyle{empty}
+    \onehalfspacing  % Fijamos el interlineado   
+}
