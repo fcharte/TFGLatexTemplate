@@ -17,6 +17,10 @@ Puedes trabajar localmente con una distribución de LaTeX, en tu propio equipo, 
 
 Terminado este proceso, tendrás en Overleaf la plantilla con todo lo necesario para trabajar. Sigue las instrucciones facilitadas en el capítulo **1. Introducción** para saber cómo usar la plantilla.
 
+## Instrucciones
+
+Abrir el archivo [main.pdf](https://github.com/fcharte/TFGLatexTemplate/blob/master/main.pdf) de este mismo repositorio para ver las instrucciones de uso de la plantilla, así como recomendaciones sobre cómo estructurar y redactar tu TFG.
+
 ## Licencia
 
 El contenido de este repositorio se distribuye bajo la licencia _CC0 1.0 Universal (CC0 1.0)_, incluida en el mismo. Esto significa esencialmente que puedes utilizarlo como quieras y para lo que quieras, sin condiciones pero también sin garantía alguna por mi parte.
