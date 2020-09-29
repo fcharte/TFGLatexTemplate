@@ -5,7 +5,7 @@ Plantilla LaTeX para redacción de memoria de TFG de tipo experimental del Dpto.
 
 Haz un _fork_ de este repositorio en tu cuenta de Github, clónalo en tu equipo o bien descarga la _release_ más reciente.
 
-Puedes trabajar localmente con una distribución de LaTeX, en tu propio equipo, o bien recurrir a una herramienta en  la nive como puede ser [Overleaf](overleaf.com). Al crear un nuevo proyecto con Overleaf es posible importar directamente desde Github, siendo esta la opción más inmediata y sencilla. Para ello sigue los pasos indicados a continuación:
+Puedes trabajar localmente con una distribución de LaTeX, en tu propio equipo, o bien recurrir a una herramienta en  la nube como puede ser [Overleaf](overleaf.com). Al crear un nuevo proyecto con Overleaf es posible importar directamente desde Github, siendo esta la opción más inmediata y sencilla. Para ello sigue los pasos indicados a continuación:
 
 1. Inicia sesión en tu cuenta de GitHub.
 2. Abre el [repositorio que contiene esta plantilla](https://github.com/fcharte/TFGLatexTemplate) en el navegador.
