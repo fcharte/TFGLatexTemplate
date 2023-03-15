@@ -17,6 +17,8 @@ Puedes trabajar localmente con una distribución de LaTeX, en tu propio equipo, 
 
 Terminado este proceso, tendrás en Overleaf la plantilla con todo lo necesario para trabajar. Sigue las instrucciones facilitadas en el capítulo **1. Introducción** para saber cómo usar la plantilla.
 
+**Aviso**: en la actual versión de Overleaf (marzo de 2023) se elige como distribución LaTeX la versión 2022 de TeX Live. Esta produce algunos errores con la actual versión de esta plantilla. Para evitarlos no hay más que abrir el menú de Overleaf y cambiar a la versión 2021.
+
 ## Instrucciones
 
 Abrir el archivo [main.pdf](https://github.com/fcharte/TFGLatexTemplate/blob/master/main.pdf) de este mismo repositorio para ver las instrucciones de uso de la plantilla, así como recomendaciones sobre cómo estructurar y redactar tu TFG.
