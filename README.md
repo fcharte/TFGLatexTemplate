@@ -15,6 +15,8 @@ Puedes trabajar localmente con una distribución de LaTeX, en tu propio equipo, 
 6. Elige la opción **New Project>Import from GitHub**.
 7. Introduce el enlace del paso 4 tras autorizar a Overleaf el acceso a tu GitHub y confirma la creación.
 
+**Aviso**: el paso 6 solo funcionará si tienes una cuenta _premium_ en Overleaf. Como alternativa, puedes descargar el repositorio desde Github en formato ZIP y, a continuación, entrar en Overleaf y usar la opción **Nuevo proyecto-->Subir proyecto** y seleccionar el archivo ZIP para utilizarlo en Overleaf.
+
 Terminado este proceso, tendrás en Overleaf la plantilla con todo lo necesario para trabajar. Sigue las instrucciones facilitadas en el capítulo **1. Introducción** para saber cómo usar la plantilla.
 
 **Aviso**: en la actual versión de Overleaf (marzo de 2023) se elige como distribución LaTeX la versión 2022 de TeX Live. Esta produce algunos errores con la actual versión de esta plantilla. Para evitarlos no hay más que abrir el menú de Overleaf y cambiar a la versión 2021.
