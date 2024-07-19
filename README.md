@@ -21,7 +21,7 @@ Puedes trabajar localmente con una distribución de LaTeX, en tu propio equipo, 
 
 Terminado este proceso, tendrás en Overleaf la plantilla con todo lo necesario para trabajar. Sigue las instrucciones facilitadas en el capítulo **1. Introducción** para saber cómo usar la plantilla.
 
-**Aviso**: en la actual versión de Overleaf (marzo de 2023) se elige como distribución LaTeX la versión 2022 de TeX Live. Esta produce algunos errores con la actual versión de esta plantilla. Para evitarlos no hay más que abrir el menú de Overleaf y cambiar a la versión 2021. **Esto ya no es necesario** con la versión de Overleaf actual (julio de 2024), que al crear un nuevo proyecto confirua por defecto la distribución 2024 de TeX Live. En esta se han corregido los cambios que provocaban problemas con la plantilla.
+**Aviso**: en la actual versión de Overleaf (marzo de 2023) se elige como distribución LaTeX la versión 2022 de TeX Live. Esta produce algunos errores con la actual versión de esta plantilla. Para evitarlos no hay más que abrir el menú de Overleaf y cambiar a la versión 2021. **Esto ya no es necesario** con la versión de Overleaf actual (julio de 2024), que al crear un nuevo proyecto configura por defecto la distribución 2024 de TeX Live. En esta se han corregido los cambios que provocaban problemas con la plantilla.
 
 ## Instrucciones
 
