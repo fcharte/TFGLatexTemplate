@@ -14,7 +14,9 @@
 %    - Pie con nombre del centro y nº de página               |
 %    - Portada oficial EPSJ - Dpto. Informática con datos     |
 %                                                             |
-% 2020/09/25 - Francisco Charte Ojeda                         |
+% 2020/09/25 - Francisco Charte Ojeda - Versión inicial       |  
+% 2024/07/19 - Francisco Charte Ojeda - Ajustes para generar  |
+%              la nueva portada de la EPSJ                    |
 % CC0 1.0 Universal (CC0 1.0)                                 |
 % https://creativecommons.org/publicdomain/zero/1.0/deed.es   |
 %                                                             |
@@ -129,18 +131,27 @@
 \renewcommand{\spanishlisttablename}{Lista de tablas}
 
 % Comando que se encarga de componer la portada del TFG
+% julio 2024 - Nueva portada la EPSJ para TFG
+\definecolor{naranja}{RGB}{198,97,21}
 \newcommand{\Portada}{ %
     \thispagestyle{empty}
     \ULCornerWallPaper{1}{imagenes/portada.pdf}
-    \begin{textblock*}{14cm}(5cm,13cm) 
+    \begin{textblock*}{18.45cm}(1.4cm,12cm) 
         \centering
-        {\fontsize{32}{38}\selectfont \textbf{\TituloTFG}}
-    \end{textblock*}
-    \begin{textblock*}{10cm}(8cm,20.6cm)
-      {\fontsize{16}{19}\selectfont \Estudiante}
-    \end{textblock*}
-    \begin{textblock*}{10cm}(7.2cm,21.9cm)
-      {\fontsize{16}{19}\selectfont \TutorA\par\TutorB}
+        {\fontsize{26}{38}\selectfont \textbf{\color{naranja}\TituloTFG}}
+      \vspace{.5cm}
+
+      {\fontsize{16}{19}\selectfont Autor: \Estudiante}
+
+      {\fontsize{14}{19}\selectfont Grado: Ingeniería en Informática}
+
+      {\fontsize{12}{10}\selectfont \ifdefempty{\TutorB}{Director}{Directores}: \TutorA\ifdefempty{\TutorB}{}{ y \TutorB}}
+      \vspace{-.4cm}
+      
+      {\fontsize{12}{10}\selectfont Departamento del director: Informática}
+      
+      \vspace{1cm}
+      {\fontsize{14}{10}\selectfont Fecha: \Fecha}
     \end{textblock*}
     ~
     \clearpage
@@ -168,9 +179,10 @@
     \hspace{2cm} El estudiante \hspace{6cm} \ifdefempty{\TutorB}{El tutor}{Los tutores}
     
     \vspace{5cm}
-    \begin{tabular}{p{6cm}p{.5cm} \ifdefempty{\TutorB}{p{7cm}}{p{4cm}p{4cm}}}
+    {\fontsize{10}{10}\selectfont
+    \begin{tabular}{p{6.5cm}p{.5cm} \ifdefempty{\TutorB}{p{7cm}}{p{4.5cm}p{4.5cm}}}
       \Estudiante & & \TutorA \ifdefempty{\TutorB}{}{& \TutorB} \\    
-    \end{tabular}
+    \end{tabular}}
     \clearpage\thispagestyle{empty}
     \onehalfspacing  % Fijamos el interlineado   
 }

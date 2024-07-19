@@ -1,6 +1,8 @@
 # TFGLatexTemplate
 Plantilla LaTeX para redacción de memoria de TFG de tipo experimental del Dpto. de Informática según la normativa de la EPSJ (Universidad de Jaén)
 
+**Novedad**: se ha actualizado la plantilla para que genere la nueva portada para Trabajos fin de grado establecida recientemente por la EPSJ.
+
 ## Cómo usar esta plantilla
 
 Haz un _fork_ de este repositorio en tu cuenta de Github, clónalo en tu equipo o bien descarga la _release_ más reciente.
@@ -19,7 +21,7 @@ Puedes trabajar localmente con una distribución de LaTeX, en tu propio equipo, 
 
 Terminado este proceso, tendrás en Overleaf la plantilla con todo lo necesario para trabajar. Sigue las instrucciones facilitadas en el capítulo **1. Introducción** para saber cómo usar la plantilla.
 
-**Aviso**: en la actual versión de Overleaf (marzo de 2023) se elige como distribución LaTeX la versión 2022 de TeX Live. Esta produce algunos errores con la actual versión de esta plantilla. Para evitarlos no hay más que abrir el menú de Overleaf y cambiar a la versión 2021.
+**Aviso**: en la actual versión de Overleaf (marzo de 2023) se elige como distribución LaTeX la versión 2022 de TeX Live. Esta produce algunos errores con la actual versión de esta plantilla. Para evitarlos no hay más que abrir el menú de Overleaf y cambiar a la versión 2021. **Esto ya no es necesario** con la versión de Overleaf actual (julio de 2024), que al crear un nuevo proyecto confirua por defecto la distribución 2024 de TeX Live. En esta se han corregido los cambios que provocaban problemas con la plantilla.
 
 ## Instrucciones
 
