@@ -5,7 +5,7 @@
 
 Este capítulo describe cómo emplear la plantilla \LaTeX~ para generar una memoria de TFG ajustada a las normas establecidas por la \textit{Escuela Politécnica Superior de Jaén} (EPSJ). La plantilla está diseñada para su uso con \verb*|pdflatex|, el compilador de \LaTeX~ más popular para generar documentos en formato \verb*|PDF|.
 
-La estructura de esta plantilla se corresponde con la requerida por la EPSJ para los TFG de tipo teórico o experimental. Estos no son los más habituales en el \textit{Grado en Ingeniería Informática}, cuyo tipo más común es el \textit{Proyecto de Ingeniería}. Puedes usar esta plantilla para generar una memoria de ese tipo modificando los nombres y contenidos de los capítulos y secciones.
+La estructura de esta plantilla ---los capítulos con los que cuenta y los títulos de estos--- se corresponde con la requerida por la EPSJ para los TFG de tipo teórico o experimental. En el \textit{Grado en Ingeniería Informática} ese y \textit{Proyecto de Ingeniería} son los dos tipos de TFG más comunes. En la \autoref{Sec.CapítulosTFG}.~\nameref{Sec.CapítulosTFG} (página~\pageref{Sec.CapítulosTFG}) se enumeran los capítulos en que se estructura habitualmente cada tipo.
 
 Este capítulo de introducción se usa en la plantilla para describir cómo escribir la memoria usando \LaTeX~, por lo que tendrás que sustituir este contenido por el corresponda a tu memoria. Para \textit{compilar} los fuentes \LaTeX~ y obtener el correspondiente \verb*|PDF| necesitarás una distribución local de \LaTeX~, como puede ser TeX Live (\url{en.wikipedia.org/wiki/TeX\_Live}) o MiKTeX (\url{en.wikipedia.org/wiki/MiKTeX}), o bien trabajar con un editor \LaTeX~ en la nube como puede ser Overleaf (\url{https://overleaf.com}).
 
@@ -515,6 +515,8 @@ Si tienes problemas para introducir algún carácter puedes recurrir a \url{en.w
 
 \section{Cómo obtener esta plantilla}
 
+Esta plantilla está disponible públicamente en el repositorio Github \href{https://github.com/fcharte/TFGLatexTemplate/releases}{TFGLatexTemplate} de su autor, Francisco Charte Ojeda.
+
 \section{Cómo configurar la plantilla con nuestros datos}
 
 A fin de generar nuestra memoria de TFG usando esta plantilla, aprovechando toda la configuración de formatos ya adaptada a la normativa de la EPSJ, tendremos que comenzar abriendo el archivo \texttt{main.tex} para configurar nuestros datos personales. Para ello localiza el bloque \LaTeX~ que aparece en el Listado~\ref{List.Variables} y sigue las instrucciones indicadas en los comentarios.
@@ -537,15 +539,20 @@ A fin de generar nuestra memoria de TFG usando esta plantilla, aprovechando toda
 
 Solo necesitas establecer el contenido de estas variables para que la portada, página de autorización y los encabezados muestren los datos correctos. Habitualmente esto es todo lo que necesitarás cambiar en el archivo \texttt{main.tex}. No obstante, si no quieres incluir al inicio de la memoria alguno de los índices que aparecen por defecto, como los de algoritmos, listados, etc., también deberás eliminar o comentar (colocar delante el carácter \%) las líneas correspondientes.
 
-\section{En cuanto al contenido de los capítulos}
+\section{En cuanto al contenido de los capítulos}\label{Sec.CapítulosTFG}
 
-Una vez que hayas establecido la configuración con tus datos, el paso siguiente será escribir el contenido de la memoria, completando los capítulos que se han previsto en la plantilla. Cada uno de ellos está almacenado en un archivo independiente y se inserta desde \texttt{main.tex} usando el comando \verb|\input|. 
+Una vez que hayas establecido la configuración con tus datos, el paso siguiente será escribir el contenido de la memoria. Para ellos se definirán y completarán los capítulos que correspondan, según las recomendaciones dadas en los dos siguientes apartados. Como toda recomendación, dicha estructura podrá adecuarse a los aspectos específicos de cada TFG.
 
-Teniendo presente que la estructura de esta memoria se corresponde con la de un TFG de tipo experimental, los capítulos y su contenido son los siguientes:
+Cada capítulo de la memoria se almacenará en un archivo independiente, con extensión \texttt{.tex}, que se insertará desde \texttt{main.tex} usando el comando \verb|\input|. En la versión original de dicho archivo, tal y como se facilita en esta plantilla, ya se incluyen los capítulos del primer tipo de TFG. El estudiante deberá agregar o eliminar los que precise, por ejemplo si su TFG es de tipo \textit{Proyecto de ingeniería} en lugar de \textit{Trabajo teórico/experimental}.
+
+
+\subsection{TFG de tipo \textit{Trabajo teórico/experimental}}
+
+Una memoria de TFG de este tipo se estructura en los capítulos indicados a continuación. Dado que esta plantilla se ajusta a ese tipo concreto, además del nombre de los capítulos también se señala el nombre del archivo \texttt{.tex} en que se encuentra.
 
 \begin{enumerate}
     \item \textbf{Introducción} - \texttt{Introduccion.tex}\footnote{En la plantilla este archivo contiene las instrucciones de cómo usar \LaTeX~ y la propia plantilla, por lo que deberás eliminar dicho contenido o bien crear tu propio archivo \texttt{Introduccion.tex} desde cero.} \par
-    La introducción al TFG, como su propio nombre denota, ha de servir como un acercamiento general y desde una perspectiva de alto nivel al trabajo realizado. Debe explicarse la motivación que nos ha llevado a abordar el problema en cuestión, su importancia, cómo se ha tratado hasta le momento, qué creemos que podemos aportar, etc., todo ello sin entrar demasiado en detalle. Es habitual indicar en la parte final de la introducción la estructura de la memoria, enumerando sus capítulos con una breve descripción de lo que se explica en cada uno de ellos. También puedes incluir un índice o tabla, al final de este capítulo, conteniendo todos los acrónimos y términos que uses en la memoria, de forma que sea fácil para quien la lea saber qué significan\footnote{La alternativa es definirlos la primera vez que aparezcan en el texto, por ejemplo: «En este TFG (\textit{Trabajo Fin de Grado}) se aborda ...».}.
+    La introducción al TFG, como su propio nombre denota, ha de servir como un acercamiento general y desde una perspectiva de alto nivel al trabajo realizado. Debe explicarse la motivación que nos ha llevado a abordar el problema en cuestión, su importancia, cómo se ha tratado hasta le momento, qué creemos que podemos aportar, etc., todo ello sin entrar demasiado en detalle. Es habitual indicar en la parte final de la introducción la estructura de la memoria, enumerando sus capítulos con una breve descripción de lo que se explica en cada uno de ellos. También puedes incluir un índice o tabla, al final de este capítulo, conteniendo todos los acrónimos y términos que uses en la memoria, de forma que sea fácil para quien la lea saber qué significan\footnote{La alternativa es definirlos la primera vez que aparezcan en el texto, por ejemplo: «En este TFG (\textit{Trabajo Fin de Grado}) se aborda ...».}. También se puede facilitar dicha lista en una apéndice al final de la memoria.
     
     \item \textbf{Antecedentes} - \texttt{Antecedentes.tex} \par
     Este capítulo tiene como objetivo demostrar que has estudiado el tema que se aborda en el TFG, describiendo primero el problema con todos los detalles necesarios y después las técnicas que se han empleado hasta el momento para tratarlo y las que propones usar tú. Un aspecto fundamental de este capítulo es la bibliografía: has de recopilar los artículos científicos más relevantes sobre el tema en cuestión, consultar libros sobre las técnicas a usar, etc., referenciando todo ello de manera adecuada.
@@ -562,6 +569,40 @@ Teniendo presente que la estructura de esta memoria se corresponde con la de un 
     \item \textbf{Conclusiones} - \texttt{Conclusiones.tex} \par
     El último capítulo de la memoria ha de presentar una recopilación de todo el trabajo realizado, los resultados obtenidos y un análisis que determine, y deje claro, si se han alcanzado las metas que se establecieron en la propuesta inicial del TFG que aprobó la correspondiente comisión. Además, también es habitual incluir una sección describiendo potenciales mejoras que podrían efectuarse o trabajos futuros que podrían derivarse de lo hecho en el TFG.
 \end{enumerate}
+
+\subsection{TFG de tipo \textit{Proyecto de ingeniería}}
+
+Una memoria de TFG de este tipo se estructura en los capítulos indicados a continuación. Junto al título de cada capítulo se sugiere el nombre que podría tener el archivo correspondiente.
+
+\begin{enumerate}
+	\item \textbf{Introducción} - \texttt{Introduccion.tex} \par
+	El contenido de este primer capítulo será análogo al mencionado para el tipo de TFG anterior, por lo que la descripción ya facilitada es aplicable aquí.
+	
+	\item \textbf{Planificación y presupuesto} - \texttt{Planificacion.tex} \par
+	En el segundo capítulo se ha de facilitar una planificación tanto temporal como económica para el desarrollo del proyecto, con una enumeración de todos los recursos precisos para alcanzar su consecución. Es habitual referenciar la normativa legal y técnica que se ha seguido para el desarrollo del proyecto, así como la metodología empleada para su organización y gestión. Ha de documentarse el proceso de cálculo para la estimación del tamaño y esfuerzo del software a construir, información a partir de la cual se derivará la planificación temporal ---lo habitual es que se refleje en un diagrama de Gantt--- y el presupuesto económico.
+	
+	\item \textbf{Análisis de requisitos} - \texttt{Requisitos.tex} \par
+	A continuación hay que documentar las entrevistas mantenidas con los hipotéticos usuarios/clientes, a partir de las cuales se identificarán los requisitos, tanto funcionales como no funcionales, del sistema. Estos se analizarán, se especificarán mediante los artefactos adecuados ---diagrama de casos de uso, historias de usuario, modelo del dominio, etc.--- y se validarán con los clientes. Es aconsejable seguir las prácticas recomendadas para especificación de requisitos en la \href{https://ieeexplore.ieee.org/document/8559686}{norma 29148-2018 de ISO/IEC/IEEE}.
+	
+	\item \textbf{Diseño del sistema} - \texttt{Diseno.tex} \par
+	En el cuarto capítulo, a partir de los requisitos previamente documentados, se procederá a realizar el diseño detallado del sistema. Aquí hay que considerar tres partes bien diferenciadas: el núcleo del sistema, su interfaz de usuario (si es que cuenta con una) y los datos sobre los que opera. Para el \textbf{núcleo del sistema} se comienza con diagramas UML de alto nivel, como los de arquitectura y paquetes, para después construir el diagrama o diagramas de clases. Por cada operación del sistema se detallarán en un diagrama de secuencia los pasos de que consta y los componentes del sistema que intervienen. También pueden emplearse diagramas de actividad u otros tipos que se consideren apropiados. La documentación de la \textbf{interfaz de usuario} se realizará con \textit{wireframes} o \textit{mockups}, con el detalle necesario para facilitar su posterior implementación. En cuanto a \textbf{los datos} sobre los que operará el software, se detallará su estructura con diagramas entidad/relación o equivalentes, según el tipo de los propios datos. Este capítulo servirá también para mencionar los patrones, arquitectónicos (p.e. MVC) y de diseño (p.e. \textit{singleton}), que se empleen en el proyecto.
+	
+	\item \textbf{Implementación} - \texttt{Implementacion.tex} \par
+	Los capítulos previos ofrecen una visión del software a desarrollar en la que no se hace asunción alguna respecto a los lenguajes de programación, bibliotecas de servicios y otras herramientas que servirían para realizar la implementación. Será en este capítulo donde se enumeren las potenciales alternativas, se evalúen sus ventajas y desventajas y, finalmente, se haga una elección justificada de las que se utilizarán. Asimismo, se detallarán las iteraciones del proceso de implementación, estructura del proyecto software, las guías de estilo que se han seguido para la codificación y documentación del código, archivos de configuración si existen (formato y parámetros), proceso de compilación (\textit{Makefile}), etc.
+	
+	\item \textbf{Pruebas} - \texttt{Pruebas.tex} \par
+	Las etapas por las que transcurra el desarrollo del software deberían ir acompañadas de sus respectivas baterías de pruebas. Es habitual incluir pruebas unitarias (\textit{unit testing}), de integración y de regresión. Este capítulo servirá para documentar tanto las herramientas empleadas para llevar a cabo esas pruebas como los test en sí mismos.
+	
+	\item \textbf{Despliegue y mantenimiento} - \texttt{Despliegue.tex} \par
+	En caso de que sea preciso, se incluirá este capítulo para describir los pasos a seguir para el despliegue y puesta en explotación del software. Es especialmente importante si se depende de alojamiento (\textit{hosting}) externo o cualquier servicio de terceros. También es importante, si procede, enumerar los aspectos a tener presentes de cara a mantener la aplicación tras su puesta en explotación, detallando las operaciones que esta necesite: actualización de parámetros, iniciación periódica, etc.
+	
+	\item \textbf{Manual de instalación y uso} - \texttt{Manuales.tex} \par
+	La última parte de la memoria del TFG la componen los manuales del instalación del software y de uso del mismo. A diferencia de los anteriores, este material ha de dirigirse al usuario final de la aplicación y no a personas con experiencia en desarrollo o programación, adecuando el vocabulario y nivel para facilitar que cualquiera pueda llevar a cabo la instalación y proceder al uso del software.
+\end{enumerate}
+
+En el caso de los TFG de este tipo, varios de los capítulos deben aportar diagramas de diferentes niveles: modelo del dominio, arquitectura del sistema, diagrama de paquetes, de clases, secuencia, E/R, etc. Se recomienda usar la \href{https://plantuml.com/es/}{herramienta PlantUML} con este fin, un programa que se integra cómodamente en editores como VSCode y que permite definir los diagramas mediante archivos de código, lo cual hace posible versionarlos ---es aconsejable usar \texttt{git} durante todo el proceso--- y generar la imagen del diagrama en diferentes formatos\footnote{Es aconsejable que todas los diagramas e imágenes a incluir en el documento se guarden en formato vectorial, por ejemplo PDF, EPS o SVG, en lugar de como mapa de bits, a fin de garantizar una calidad óptima de los mismos en la memoria.}. 
+
+\subsection{Otros archivos del proyecto}
 
 Además de los archivos anteriores, correspondientes a los capítulos, también debes editar el contenido del archivo \texttt{Agradecimientos.tex} para escribir tus propios agradecimientos y dedicatoria.
 
