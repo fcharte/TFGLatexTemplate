@@ -14,14 +14,12 @@ Puedes trabajar localmente con una distribución de LaTeX, en tu propio equipo, 
 3. Haz clic en la opción **Fork** para crear en tu GitHub una copia de este repositorio.
 4. En versión del repositorio obtén el enlace para clonación, que será algo similar a https://github.com/TuCuenta/TFGLatexTemplate.git, y cópialo al portapapeles.
 5. Ve a [Overleaf](overleaf.com) y, si no lo has hecho aún, regístrate con una cuenta gratuita.
-6. Elige la opción **New Project>Import from GitHub**.
+6. Elige la opción **New Project>Import from GitHub** (solo si tienes una cuenta _premium_ de Overleaf).
 7. Introduce el enlace del paso 4 tras autorizar a Overleaf el acceso a tu GitHub y confirma la creación.
 
 **Aviso**: el paso 6 solo funcionará si tienes una cuenta _premium_ en Overleaf. Como alternativa, puedes descargar el repositorio desde Github en formato ZIP y, a continuación, entrar en Overleaf y usar la opción **Nuevo proyecto-->Subir proyecto** y seleccionar el archivo ZIP para utilizarlo en Overleaf.
 
 Terminado este proceso, tendrás en Overleaf la plantilla con todo lo necesario para trabajar. Sigue las instrucciones facilitadas en el capítulo **1. Introducción** para saber cómo usar la plantilla.
-
-**Aviso**: en la actual versión de Overleaf (marzo de 2023) se elige como distribución LaTeX la versión 2022 de TeX Live. Esta produce algunos errores con la actual versión de esta plantilla. Para evitarlos no hay más que abrir el menú de Overleaf y cambiar a la versión 2021. **Esto ya no es necesario** con la versión de Overleaf actual (julio de 2024), que al crear un nuevo proyecto configura por defecto la distribución 2024 de TeX Live. En esta se han corregido los cambios que provocaban problemas con la plantilla.
 
 ## Instrucciones
 
